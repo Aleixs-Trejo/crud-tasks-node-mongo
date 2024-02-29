@@ -1,0 +1,8 @@
+#variables de entorno
+.env
+
+#carpeta construida
+dist
+
+#carpeta de modulos
+node_modules

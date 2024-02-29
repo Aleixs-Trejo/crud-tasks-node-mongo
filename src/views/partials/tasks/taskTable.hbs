@@ -1,0 +1,42 @@
+{{#if tasks}}
+<table class="table table-bordered table-hover table-dark">
+  <thead>
+    <tr>
+      <th>N°</th>
+      <th>Título</th>
+      <th>Descripción</th>
+      <th>Opciones</th>
+    </tr>
+  </thead>
+  <tbody>
+    {{#each tasks}}
+    <tr>
+      <td>{{@index}}</td> {{!-- Ciclo del each de handlebars --}}
+      <td>{{title}}</td>
+      <td>{{description}}</td>
+      <td>
+        {{#if done}}
+          <a class="btn btn-dark" href="tasks/{{_id}}/done"><figure class="undone__figure">
+            <img src="./assets/icon-remove-done.svg" alt="Icon Undone" class="undone__img">
+          </figure></a>
+        {{else}}
+          <a class="btn btn-success" href="/tasks/{{_id}}/done"><figure class="done__figure">
+            <img src="./assets/icon-done.svg" alt="Icon Done" class="done__img">
+          </figure></a>
+        {{/if}}
+        <a class="btn btn-info" href="/tasks/{{_id}}/edit"><figure class="edit__figure">
+          <img src="./assets/icon-edit.svg" alt="Icon Edit" class="edit__img">
+        </figure></a>
+        <a class="btn btn-danger" href="/tasks/{{_id}}/delete"><figure class="delete__figure">
+          <img src="./assets/icon-delete.svg" alt="Icon Delete" class="delete__img">
+        </figure></a>
+      </td>
+    </tr>
+    {{/each}}
+  </tbody>
+</table>
+{{else}}
+<div class="text-center">
+  <h1>No hay Tareas 🙁</h1>
+</div>
+{{/if}}

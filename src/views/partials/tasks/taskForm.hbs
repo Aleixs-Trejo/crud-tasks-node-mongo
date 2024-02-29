@@ -1,0 +1,29 @@
+<div class="card card-body p-4 rounded-0 bg-dark text-white">
+  <h3>Agregar una Tarea</h3>
+  <form action="/tasks/add" method="POST">
+  <div>
+    <label for="title">Título de la tarea:</label><br>
+    <input
+      type="text"
+      name="title"
+      id="title"
+      placeholder="Ejemplo: Sacar la basura"
+      required
+      class="form-control rounded-0 bg-dark text-white"
+    />
+  </div>
+  <div>
+    <label for="description">Descripción de la tarea:</label><br>
+    <textarea
+      name="description"
+      id="description"
+      cols="50"
+      rows="15"
+      placeholder="Ejemplo: Sacar la basura a las 19:00H y alimentar al perro..."
+      required
+      class="form-control rounded-0 bg-dark text-white resize-no"
+    ></textarea>
+  </div>
+  <button class="btn btn-primary btn-sm mt-3">Agregar</button>
+</form>
+</div>
