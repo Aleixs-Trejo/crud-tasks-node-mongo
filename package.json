@@ -12,6 +12,7 @@
   "author": "Alesis",
   "license": "ISC",
   "dependencies": {
+    "@babel/runtime": "^7.24.0",
     "dotenv": "^16.4.5",
     "express": "^4.18.2",
     "express-handlebars": "^7.1.2",
